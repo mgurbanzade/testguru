@@ -1,0 +1,11 @@
+section.about
+  .container
+    h1.section-title = t('.title')
+    ul.list
+      - t('.list_items').each do |key, value|
+        - if key != :title
+          li.list-item
+            = value
+    .links
+      = link_to t('.thinknetica'), @thinknetica_url, class: 'thinknetica', target: '_blank'
+      = link_to t('.author'), @author_path, class: 'author', target: '_blank'

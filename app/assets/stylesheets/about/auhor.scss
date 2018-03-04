@@ -1,0 +1,14 @@
+.github {
+  display: block;
+  color: #fff;
+  font-size: 3vw;
+  text-align: center;
+  transition: transform 0.5s;
+  text-shadow: 1px 1px #000;
+
+  &:hover {
+    color: #fff;
+    transform: scale(1.2);
+    transition: transform 0.5s;
+  }
+}
