@@ -1,4 +1,6 @@
 ru:
+  errors:
+    max_answers: У одного вопроса не может быть больше четырех ответов.
   pages:
     about:
       title: О TestGuru
