@@ -1,0 +1,14 @@
+.general-container.col-lg-8
+  .crumbs
+    ul
+      li
+        = @test.category.title
+        | >
+      li = link_to @test.title, @test
+  h1.question-title.question-title--new = t('.new_question')
+  = form_with model: [@test, @question], local: true do |f|
+    = f.text_field :body, id: 'question[body]', class: 'form-control', placeholder: "#{t('.question_content')}"
+    br
+    .btn-row
+      = f.submit "#{t('.create_question')}", class: 'btn btn-success'
+      = link_to t('.back'), tests_path, class: 'btn btn-primary'

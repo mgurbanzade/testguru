@@ -1,17 +1,14 @@
 ru:
   errors:
     max_answers: У одного вопроса не может быть больше четырех ответов.
-  pages:
-    about:
-      title: О TestGuru
-      list_items:
-        test_control: Создание тестов и управление ими
-        auth: Аутентификация
-        roles: Базовое разграничение прав доступа
-        tests: Выполнение тестов
-        share: Публикация результатов в соцсети
-      thinknetica: Thinknetica
-      author: Об авторе
-    author:
-      title: Махрам Гурбанзаде
-      github: Github
+  tests:
+    show:
+      new_question: Добавить вопрос
+      back: Назад
+  questions:
+    new:
+      new_question: Новый Вопрос
+      question_content: Введите вопрос
+      create_question: Создать Вопрос
+      back: Назад
+

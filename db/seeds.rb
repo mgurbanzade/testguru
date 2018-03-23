@@ -6,24 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.create([{ name: 'Michael' },
-                     { name: 'John' }])
+users = User.create([{ name: 'Михаил' },
+                     { name: 'Геннадий' }])
 
-categories = Category.create([{ title: 'Geography' },
-                              { title: 'Music' },
-                              { title: 'Sports' }])
+categories = Category.create([{ title: 'География' },
+                              { title: 'Музыка' },
+                              { title: 'Спорт' }])
 
-tests = Test.create([{ title: 'Capitals', level: 1, category_id: categories[0].id, author_id: users[0].id },
-                     { title: 'Rock Music', level: 1, category_id: categories[1].id, author_id: users[1].id },
-                     { title: 'Football', level: 1, category_id: categories[2].id,  author_id: users[0].id }])
+tests = Test.create([{ title: 'Столицы мира', level: 1, category_id: categories[0].id, author_id: users[0].id },
+                     { title: 'Рок музыка', level: 1, category_id: categories[1].id, author_id: users[1].id },
+                     { title: 'Футбол', level: 1, category_id: categories[2].id,  author_id: users[0].id }])
 
-questions = Question.create([{ body: 'What is the capital of Brazil?', test_id: tests[0].id },
-                             { body: 'What was the name of Nirvana leader?', test_id: tests[1].id },
-                             { body: 'Which footballer has an alias of \'The Phenomenon\'', test_id: tests[2].id }])
+questions = Question.create([{ body: 'Как называется столица Бразилии?', test_id: tests[0].id },
+                             { body: 'Как звали фронтмена группы Нирвана?', test_id: tests[1].id },
+                             { body: 'У какого футболиста псевдоним "Эль Феномено"?', test_id: tests[2].id }])
 
-answers = Answer.create([{ body: 'Brasilia', correct: true, question_id: questions[0].id },
-                         { body: 'Kurt Cobain', correct: true, question_id: questions[1].id },
-                         { body: 'Ronaldo', correct: true, question_id: questions[2].id }])
+answers = Answer.create([{ body: 'Бразилиа', correct: true, question_id: questions[0].id },
+                         { body: 'Курт Кобейн', correct: true, question_id: questions[1].id },
+                         { body: 'Роналдо', correct: true, question_id: questions[2].id }])
 
 test_passages = TestPassage.create([{ user_id: users[0].id, test_id: tests[0].id },
                                    { user_id: users[1].id, test_id: tests[1].id }])
