@@ -1,14 +1,34 @@
 ru:
+  activerecord:
+    attributes:
+      question:
+        body: Поле вопроса
+    errors:
+      messages:
+        blank: не может быть пустым
+  create: Создать
+  add: Добавить
+  edit: Изменить
+  update: Обновить
+  delete: Удалить
+  confirm: Вы уверены?
+  back: Назад
+  name: Название
   errors:
     max_answers: У одного вопроса не может быть больше четырех ответов.
   tests:
+    index:
+      tests: Список тестов
+      quantity: Количество вопросов
     show:
       new_question: Добавить вопрос
-      back: Назад
   questions:
-    new:
+    form:
       new_question: Новый Вопрос
+      edit_question: Редактирование Вопроса
       question_content: Введите вопрос
-      create_question: Создать Вопрос
-      back: Назад
+  shared:
+    footer:
+      author: Махрам Гурбанзаде
+      project: Учебный проект в онлайн-школе Thinknetica
 

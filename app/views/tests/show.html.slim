@@ -1,10 +1,8 @@
 .test-content
   h1.test-title = @test.title
   table.table.table-striped
-    - @test.questions.each do |question|
-      tr
-        td = link_to question.body, question
+    = render @test.questions
+  br
   .btn-row
     = link_to t('.new_question'), new_test_question_url(@question), class: 'btn btn-success'
-    br
-    = link_to t('.back'), tests_path, class: 'btn btn-primary'
+    = link_to t('back'), tests_path, class: 'btn btn-primary'

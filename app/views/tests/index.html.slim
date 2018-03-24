@@ -1,3 +1,8 @@
-ul
-  - @tests.each do |test|
-    li = link_to test.title, test
+.general-container
+  h1.section-title = t('.tests')
+  h1 = @test
+  table.table.table-striped
+    tr
+      th class="body" = t('name')
+      th = t('.quantity')
+    = render @tests

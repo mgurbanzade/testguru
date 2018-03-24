@@ -1,0 +1,9 @@
+footer.main-footer
+  .footer-links
+    span.current-year
+      | &copy;
+      =<> current_year
+      = t('.author')
+    = github_url('mgurbanzade', 'testguru')
+    = link_to t('.project'), 'http://thinknetica.com/', target: :_blank
+

@@ -1,0 +1,8 @@
+h1.question-title = question_header
+= form_with model: [@test, @question], local: true do |f|
+  = render 'shared/errors', resource: @question
+  = f.text_field :body, class: 'form-control', placeholder: "#{t('.question_content')}"
+  br
+  .btn-row
+    = f.submit form_button, class: 'btn btn-success'
+    = link_to t('back'), @question.test, class: 'btn btn-primary'

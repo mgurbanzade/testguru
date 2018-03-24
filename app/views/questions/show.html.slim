@@ -1,2 +1,4 @@
 .general-container
   h1.question-title = @question.body
+  .btn-row
+    = link_to t('back'), @question.test, class: 'btn btn-primary'

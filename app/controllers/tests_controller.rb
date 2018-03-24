@@ -5,19 +5,34 @@ class TestsController < ApplicationController
     @tests = Test.all
   end
 
+  def show; end
+
   def new
+    @test = Test.new
   end
 
   def create
-    # test = Test.create(test_params)
-    #render plain: test.inspect
+    @test = @Test.new(test_params)
+
+    if @test.save
+      redirect_to @test
+    else
+      render :new
+    end
   end
 
-  def edit
+  def edit; end
+
+  def update
+    if @test.update(test_params)
+      redirect_to @test
+    else
+      render :edit
+    end
   end
 
-  def show
-    @test
+  def destroy
+    @question.destroy
   end
 
   private

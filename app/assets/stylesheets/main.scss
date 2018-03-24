@@ -1,10 +1,11 @@
 @import 'bootstrap';
 
 body {
-  background-image: image-url('bg.jpg');
-  background-repeat: no-repeat;
-  background-size: fill;
-  background-position: 53% -50px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6dd5ed, #2193b0);
+  background-size: cover;
+  height: 100vh;
 }
 
 ul {
@@ -17,16 +18,38 @@ a, a:hover {
   text-decoration: none;
 }
 
+.container {
+  flex-grow: 1;
+}
+
 .general-container {
-  height: 400px;
+  minheight: 400px;
   background-color: #fff;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 60px;
   box-shadow: 4px 4px 4px 0 rgba(0,0,0,0.4);
   border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
   position: relative;
+}
+
+table {
+  td.body {
+    width: 80%;
+  }
+}
+
+.section-title {
+  font-size: 25px;
+  text-align: center;
+  color: #383838;
+
+  &--new {
+    font-size: 30px;
+    padding-top: 80px;
+    margin-bottom: 20px;
+  }
 }
 
 .btn-row {
@@ -41,4 +64,9 @@ a, a:hover {
   &:last-child {
     margin-right: 0;
   }
+}
+
+.errors-list {
+  color: red;
+  margin-bottom: 10px;
 }
