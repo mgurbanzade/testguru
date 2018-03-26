@@ -1,0 +1,15 @@
+.general-container
+  h1.section-title = @test_passage.test.title
+  .question-header
+    b = question_title
+    b = t('.total_questions', count: "#{@test_passage.total_questions}")
+
+  = form_with url: test_passage_path(@test_passage), local: true, method: :put do |f|
+    .answers-container
+      = f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b|
+          = b.check_box id: "answer_ids_#{b.object.id}", class: 'answer-input'
+          = b.label class: 'answer-label'
+
+    .btn-row = f.submit t('.next'), class: 'btn btn-success'
+
+

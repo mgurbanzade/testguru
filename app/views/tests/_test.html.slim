@@ -1,3 +1,4 @@
 tr
   td class="body" = link_to test.title, test
   td = test.questions.size
+  td = button_to t('.start'), start_test_path(test), class: 'btn btn-success'

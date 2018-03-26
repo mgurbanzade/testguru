@@ -1,0 +1,12 @@
+.general-container
+  h1.question-title = @answer.question.body
+  table.table.table-striped
+    tr
+      th = t('.answer')
+      th = t('.correct?')
+    tr
+      td class="body" = @answer.body
+      td = @answer.correct
+  br
+  .btn-row
+    = link_to t('back'), @answer.question, class: 'btn btn-primary'

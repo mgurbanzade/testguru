@@ -1,0 +1,11 @@
+h1.question-title = resource_header(@answer, 'answer')
+= form_with model: [@question, @answer], local: true do |f|
+  = render 'shared/errors', resource: @answer
+  = f.text_field :body, class: 'form-control', placeholder: "#{t('.answer_content')}"
+  .checkbox
+    = f.label :correct, t('.correct'), class: 'checkbox-label'
+    = f.check_box :correct, id: :answer_correct, class: 'checkbox-input'
+  br
+  .btn-row
+    = f.submit form_button(@answer), class: 'btn btn-success'
+    = link_to t('back'), @answer.question, class: 'btn btn-primary'

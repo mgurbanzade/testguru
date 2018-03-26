@@ -1,15 +1,4 @@
 module QuestionsHelper
-
-  def question_header
-    return t('.new_question') if @question.new_record?
-    t('.edit_question')
-  end
-
-  def form_button
-    return t('create') if @question.new_record?
-    t('update')
-  end
-
   def current_year
     Time.current.year
   end

@@ -1,0 +1,9 @@
+.general-container
+  h1.section-title = t('.title', test_title:  @test_passage.test.title)
+  p.result-info
+    = t('.percent')
+    span class="result #{result_color_class}" = number_to_percentage(@test_passage.total_percent, precision: 0)
+  p.result-info = test_passage_status
+
+  p.result-info
+    = link_to t('.tests'), root_path

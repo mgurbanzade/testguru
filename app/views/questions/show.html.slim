@@ -1,4 +1,12 @@
 .general-container
   h1.question-title = @question.body
+  table.table.table-striped
+    tr
+      th = t('.answers')
+      th = t('.correct?')
+      th colspan="2" = t('.actions')
+      = render @question.answers
+  br
   .btn-row
+    = link_to t('add'), new_question_answer_url(@question), class: 'btn btn-success'
     = link_to t('back'), @question.test, class: 'btn btn-primary'

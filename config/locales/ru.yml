@@ -20,13 +20,39 @@ ru:
     index:
       tests: Список тестов
       quantity: Количество вопросов
+      actions: Действия
     show:
       new_question: Добавить вопрос
+    test:
+      start: Пройти Тест
   questions:
+    show:
+      answers: Ответы
+      actions: Действия
+      correct?: correct?
     form:
       new_question: Новый Вопрос
       edit_question: Редактирование Вопроса
       question_content: Введите вопрос
+  answers:
+    form:
+      new_answer: Новый Ответ
+      edit_answer: Редактирование Ответа
+      answer_content: Введите ответ
+      correct: Правильный ответ
+    show:
+      answer: Ответ
+      correct?: correct?
+  test_passages:
+    show:
+      next: Вперед
+      total_questions: "Всего вопросов: %{count}"
+    result:
+      title: "Тест \"%{test_title}\" завершен!"
+      percent: "Процент правильных ответов составляет:"
+      test_passed: Поздравляем! Тест пройден!
+      test_failed: К сожалению, тест не был пройден :(
+      tests: Список всех тестов
   shared:
     footer:
       author: Махрам Гурбанзаде
