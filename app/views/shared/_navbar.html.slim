@@ -1,0 +1,19 @@
+nav.main-navigation
+  .hamburger
+    span.bar.bar1
+    span.bar.bar2
+    span.bar.bar3
+  .navigation-items
+    ul.menu
+      li.menu-item = link_to t('.about'), root_path << 'about.html', target: '_blank'
+      li.menu-item = link_to t('.author'), root_path << 'author.html', target: '_blank'
+    .user-block
+      - if logged_in?
+        .welcome-user
+          .greet
+            span = t('.welcome', user: current_user.email)
+            = link_to t('.project_name'), root_path, class: 'project-name'
+          = link_to t('.logout'), logout_path, method: :delete
+      - else
+        = link_to t('.sign_up'), signup_path
+        = link_to t('.sign_in'), login_path

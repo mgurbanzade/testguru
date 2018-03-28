@@ -1,4 +1,3 @@
 - if resource.errors.present?
   - resource.errors.full_messages.each do |message|
-    ul.errors-list
-      li = message
+    .alert.alert-danger = message

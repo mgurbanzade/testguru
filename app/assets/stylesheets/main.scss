@@ -23,7 +23,6 @@ a, a:hover {
 }
 
 .general-container {
-  minheight: 400px;
   background-color: #fff;
   margin: 0 auto;
   margin-top: 60px;
@@ -37,6 +36,16 @@ a, a:hover {
 table {
   td.body, th.body {
     width: 80%;
+    text-align: left;
+  }
+
+  td, th {
+    white-space: nowrap;
+    text-align: center;
+
+    &[colspan="2"] {
+      text-align: center;
+    }
   }
 }
 
@@ -55,6 +64,7 @@ table {
 .btn-row {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 
   a, input[type="submit"] {
     display: block;
@@ -66,7 +76,3 @@ table {
   }
 }
 
-.errors-list {
-  color: red;
-  margin-bottom: 10px;
-}

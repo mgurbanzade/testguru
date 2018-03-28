@@ -1,0 +1,11 @@
+= form_with url: sessions_path, local: true do |f|
+  = flash_message
+  .form-row
+    = f.label :email, t('.email')
+    = f.text_field :email, id: :email, class: 'form-control'
+  .form-row
+    = f.label :password, t('.password')
+    = f.password_field :password, id: :password, class: 'form-control'
+
+  .btn-row
+    = f.submit t('.login'), class: 'btn btn-success'

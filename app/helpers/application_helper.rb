@@ -1,11 +1,17 @@
 module ApplicationHelper
   def resource_header(resource, name)
-    return t(".new_#{name}") if resource.new_record?
-    t(".edit_#{name}")
+    resource.new_record? ? t(".new_#{name}") : t(".edit_#{name}")
   end
 
   def form_button(resource)
-    return t('create') if resource.new_record?
-    t('update')
+    resource.new_record? ? t('create') : t('update')
+  end
+
+  def flash_message
+    flash.map do |key, value|
+      content_tag :div, class: "alert alert-#{key}" do
+        value
+      end
+    end.join.html_safe
   end
 end

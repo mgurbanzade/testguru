@@ -5,5 +5,7 @@
     tr
       th class="body" = t('name')
       th = t('.quantity')
-      th = t('.actions')
+      th colspan="3" = t('.actions')
     = render @tests
+  .btn-row
+    = link_to t('create'), new_test_path, class: 'btn btn-success'

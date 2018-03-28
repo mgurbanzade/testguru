@@ -1,9 +1,14 @@
 class User < ApplicationRecord
+  CORRECT_EMAIL_FORMAT = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :own_tests, class_name: 'Test', foreign_key: 'author_id'
 
-  validates :name, presence: true
+  validates :email, format: CORRECT_EMAIL_FORMAT, uniqueness: true
+  validates :password, presence: true
+
+  has_secure_password
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test: test)

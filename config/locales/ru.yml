@@ -3,7 +3,28 @@ ru:
     attributes:
       question:
         body: Поле вопроса
+      user:
+        email: Адрес электронной почты
+        password: Поле пароля
+        password_confirmation: Пароли
+      test:
+        title: Название теста
+        category: Требуется указать
+        author: Требуется указать
     errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: является неверным
+            password_confirmation:
+              confirmation: не совпадают
+        test:
+          attributes:
+            category:
+              required: категорию теста
+            author:
+              required: автора теста
       messages:
         blank: не может быть пустым
   create: Создать
@@ -25,6 +46,12 @@ ru:
       new_question: Добавить вопрос
     test:
       start: Пройти Тест
+    form:
+      new_test: Новый тест
+      edit_test: Редактирование теста
+      test_content: Название теста
+      level: Уровень сложности
+      select: Выбрать категорию
   questions:
     show:
       answers: Ответы
@@ -53,7 +80,30 @@ ru:
       test_passed: Поздравляем! Тест пройден!
       test_failed: К сожалению, тест не был пройден :(
       tests: Список всех тестов
+  users:
+    new:
+      sign_up: Регистрация
+    form:
+      email: "Адрес электронной почты:"
+      password: "Пароль:"
+      password_confirmation: "Подтверждение пароля:"
+      register: Зарегистрироваться
+  sessions:
+    new:
+      auth: Вход в систему
+    form:
+      email: "Адрес электронной почты:"
+      password: "Пароль:"
+      login: Войти
   shared:
+    navbar:
+      about: О TestGuru
+      author: Об Авторе
+      sign_up: Регистрация
+      sign_in: Вход
+      welcome: "Добро пожаловать, %{user} "
+      project_name: в Test Guru!
+      logout: Выход
     footer:
       author: Махрам Гурбанзаде
       project: Учебный проект в онлайн-школе Thinknetica

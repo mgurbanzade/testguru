@@ -1,7 +1,6 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show update start]
-  before_action :find_question, only: :show
-  before_action :find_user, only: :start
+  before_action :authenticate_user!
+  before_action :find_test, only: %i[show update start edit destroy]
 
   def index
     @tests = Test.all
@@ -14,7 +13,8 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.own_tests.build(test_params)
+
 
     if @test.save
       redirect_to @test
@@ -34,27 +34,24 @@ class TestsController < ApplicationController
   end
 
   def destroy
-    @question.destroy
+    @test.destroy
+    redirect_to root_path
   end
 
   def start
     @test = Test.find(params[:id])
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test)
   end
 
   private
 
   def test_params
-    params.require(:test).permit(:title, :level)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 
   def find_test
     @test = Test.find(params[:id])
-  end
-
-  def find_question
-    @question = @test.questions.find(params[:id])
   end
 
   def find_user

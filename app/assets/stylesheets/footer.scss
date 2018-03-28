@@ -1,9 +1,38 @@
+@import 'vars';
+
 .main-footer {
   padding: 20px 60px;
+
+  a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    transition: transform 0.5s;
+
+    &:hover {
+      color: #fff;
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
+  }
 }
 
 .footer-links {
   display: flex;
   justify-content: space-between;
   color: #fff;
+}
+
+@media #{$mobile} {
+  .main-footer {
+    padding: 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+
+    a {
+      padding: 0;
+    }
+  }
 }
