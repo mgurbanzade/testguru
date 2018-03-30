@@ -5,15 +5,13 @@ nav.main-navigation
     span.bar.bar3
   .navigation-items
     ul.menu
+      - if current_user.is_a?(Admin)
+        li.menu-item = link_to t('.admin_mode'), admin_tests_path
       li.menu-item = link_to t('.about'), root_path << 'about.html', target: '_blank'
       li.menu-item = link_to t('.author'), root_path << 'author.html', target: '_blank'
     .user-block
-      - if logged_in?
-        .welcome-user
-          .greet
-            span = t('.welcome', user: current_user.email)
-            = link_to t('.project_name'), root_path, class: 'project-name'
-          = link_to t('.logout'), logout_path, method: :delete
+      - if user_signed_in?
+        = render 'shared/greeting'
       - else
-        = link_to t('.sign_up'), signup_path
-        = link_to t('.sign_in'), login_path
+        = link_to t('.sign_up'), new_user_registration_path
+        = link_to t('.sign_in'), new_user_session_path

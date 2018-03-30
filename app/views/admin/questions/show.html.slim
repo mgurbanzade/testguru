@@ -8,5 +8,5 @@
       = render @question.answers
   br
   .btn-row
-    = link_to t('add'), new_question_answer_url(@question), class: 'btn btn-success'
-    = link_to t('back'), @question.test, class: 'btn btn-primary'
+    = link_to t('add'), new_admin_question_answer_url(@question), class: 'btn btn-success'
+    = link_to t('back'), admin_test_path(@question.test), class: 'btn btn-primary'

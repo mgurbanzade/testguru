@@ -9,4 +9,4 @@
       td = @answer.correct
   br
   .btn-row
-    = link_to t('back'), @answer.question, class: 'btn btn-primary'
+    = link_to t('back'), admin_question_path(@answer.question), class: 'btn btn-primary'

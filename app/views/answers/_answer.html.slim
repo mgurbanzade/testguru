@@ -1,6 +1,0 @@
-tr
-  td class="body" = link_to answer.body, answer
-  td = answer.correct
-  td = link_to t('edit'), edit_answer_path(answer)
-  td = link_to t('delete'), answer_path(answer), method: :delete, data: { confirm:"#{t('confirm')}" }
-

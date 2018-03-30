@@ -1,8 +1,7 @@
 h1.question-title = resource_header(@question, 'question')
-= form_with model: [@test, @question], local: true do |f|
-  = render 'shared/errors', resource: @question
+= form_with model: [:admin, @test, @question], local: true do |f|
   = f.text_field :body, class: 'form-control', placeholder: "#{t('.question_content')}"
   br
   .btn-row
     = f.submit form_button(@question), class: 'btn btn-success'
-    = link_to t('back'), @question.test, class: 'btn btn-primary'
+    = link_to t('back'), admin_test_path(@question.test), class: 'btn btn-primary'

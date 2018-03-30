@@ -5,7 +5,8 @@ body {
   flex-direction: column;
   background-image: linear-gradient(to top, #6dd5ed, #2193b0);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 ul {
@@ -31,6 +32,14 @@ a, a:hover {
   padding: 15px;
   box-sizing: border-box;
   position: relative;
+
+  &.signup-form {
+    max-width: 500px;
+  }
+
+  .form-row {
+    margin: 15px 0 20px;
+  }
 }
 
 table {

@@ -1,6 +1,4 @@
 tr
-  td class="body" = link_to test.title, test
+  td class="body" = test.title
   td = test.questions.size
-  td = link_to t('delete'), test_path(test), method: :delete, data: { confirm:"#{t('confirm')}" }, class: 'btn btn-danger'
-  td = link_to t('update'), edit_test_path(test), class: 'btn btn-primary'
   td = button_to t('.start'), start_test_path(test), class: 'btn btn-success'

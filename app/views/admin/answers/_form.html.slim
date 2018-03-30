@@ -1,6 +1,5 @@
 h1.question-title = resource_header(@answer, 'answer')
-= form_with model: [@question, @answer], local: true do |f|
-  = render 'shared/errors', resource: @answer
+= form_with model: [:admin, @question, @answer], local: true do |f|
   = f.text_field :body, class: 'form-control', placeholder: "#{t('.answer_content')}"
   .checkbox
     = f.label :correct, t('.correct'), class: 'checkbox-label'
@@ -8,4 +7,4 @@ h1.question-title = resource_header(@answer, 'answer')
   br
   .btn-row
     = f.submit form_button(@answer), class: 'btn btn-success'
-    = link_to t('back'), @answer.question, class: 'btn btn-primary'
+    = link_to t('back'), admin_question_path(@answer.question), class: 'btn btn-primary'

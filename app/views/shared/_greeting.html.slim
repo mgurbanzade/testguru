@@ -1,0 +1,6 @@
+.welcome-user
+  - if current_user.first_name
+    = link_to current_user.first_name, root_path, class: 'project-name'
+  - else
+    = link_to current_user.email, root_path, class: 'project-name'
+  = link_to t('.logout'), destroy_user_session_path, method: :delete

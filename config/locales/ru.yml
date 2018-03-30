@@ -27,6 +27,25 @@ ru:
               required: автора теста
       messages:
         blank: не может быть пустым
+  devise:
+    registrations:
+      new:
+        sign_up: Регистрация
+        first_name: Имя
+        last_name: Фамилия
+        password: Пароль
+        register: Зарегистрироваться
+        confirmation: Подтверждение пароля
+    sessions:
+      new:
+        sign_in: Вход
+        password: Пароль
+        remember_me: Запомнить
+        login: Войти
+    shared:
+      links:
+        signup: Регистрация
+        forgot: Забыли пароль?
   create: Создать
   add: Добавить
   edit: Изменить
@@ -37,39 +56,50 @@ ru:
   name: Название
   errors:
     max_answers: У одного вопроса не может быть больше четырех ответов.
+  admin:
+    tests:
+      index:
+        tests: Список тестов
+        quantity: Количество вопросов
+        actions: Действия
+      show:
+        new_question: Добавить вопрос
+      test:
+        start: Пройти Тест
+      form:
+        new_test: Новый тест
+        edit_test: Редактирование теста
+        test_content: Название теста
+        level: Уровень сложности
+        select: Выбрать категорию
+    questions:
+      show:
+        answers: Ответы
+        actions: Действия
+        correct?: correct?
+      form:
+        new_question: Новый Вопрос
+        edit_question: Редактирование Вопроса
+        question_content: Введите вопрос
+    answers:
+      form:
+        new_answer: Новый Ответ
+        edit_answer: Редактирование Ответа
+        answer_content: Введите ответ
+        correct: Правильный ответ
+      show:
+        answer: Ответ
+        correct?: correct?
+    shared:
+      navbar:
+        user_mode: Режим пользователя
   tests:
     index:
       tests: Список тестов
       quantity: Количество вопросов
       actions: Действия
-    show:
-      new_question: Добавить вопрос
     test:
       start: Пройти Тест
-    form:
-      new_test: Новый тест
-      edit_test: Редактирование теста
-      test_content: Название теста
-      level: Уровень сложности
-      select: Выбрать категорию
-  questions:
-    show:
-      answers: Ответы
-      actions: Действия
-      correct?: correct?
-    form:
-      new_question: Новый Вопрос
-      edit_question: Редактирование Вопроса
-      question_content: Введите вопрос
-  answers:
-    form:
-      new_answer: Новый Ответ
-      edit_answer: Редактирование Ответа
-      answer_content: Введите ответ
-      correct: Правильный ответ
-    show:
-      answer: Ответ
-      correct?: correct?
   test_passages:
     show:
       next: Вперед
@@ -80,27 +110,14 @@ ru:
       test_passed: Поздравляем! Тест пройден!
       test_failed: К сожалению, тест не был пройден :(
       tests: Список всех тестов
-  users:
-    new:
-      sign_up: Регистрация
-    form:
-      email: "Адрес электронной почты:"
-      password: "Пароль:"
-      password_confirmation: "Подтверждение пароля:"
-      register: Зарегистрироваться
-  sessions:
-    new:
-      auth: Вход в систему
-    form:
-      email: "Адрес электронной почты:"
-      password: "Пароль:"
-      login: Войти
   shared:
     navbar:
       about: О TestGuru
       author: Об Авторе
       sign_up: Регистрация
       sign_in: Вход
+      admin_mode: Режим Администратора
+    greeting:
       welcome: "Добро пожаловать, %{user} "
       project_name: в Test Guru!
       logout: Выход

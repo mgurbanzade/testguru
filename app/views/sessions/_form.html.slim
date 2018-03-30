@@ -1,5 +1,4 @@
 = form_with url: sessions_path, local: true do |f|
-  = flash_message
   .form-row
     = f.label :email, t('.email')
     = f.text_field :email, id: :email, class: 'form-control'
