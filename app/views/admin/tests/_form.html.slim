@@ -1,10 +1,11 @@
 h1.question-title = resource_header(@test, 'test')
+= render 'admin/shared/errors', resource: @test
 = form_with model: [:admin, @test], local: true do |f|
   = f.text_field :title, class: 'form-control', placeholder: t('.test_content')
   .form-row
     = f.label :level, t('.level')
     = f.number_field :level, class: 'form-control'
-  = f.collection_select :category_id, Category.all, :id, :title, { prompt: t('.select')}, { class: 'custom-select' }
+  = f.collection_select :category_id, Category.all, :id, :title, { prompt: t('helpers.select')}, { class: 'custom-select' }
   br
   .btn-row
     = f.submit form_button(@test), class: 'btn btn-success'

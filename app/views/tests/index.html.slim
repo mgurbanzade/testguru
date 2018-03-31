@@ -1,9 +1,8 @@
 .general-container
   h1.section-title = t('.tests')
-  h1 = @test
   table.table.table-striped
     tr
-      th class="body" = t('name')
-      th = t('.quantity')
-      th colspan="3" = t('.actions')
+      th.body = t('name')
+      th.quantity = t('.quantity')
+      th.action = t('.actions')
     = render @tests

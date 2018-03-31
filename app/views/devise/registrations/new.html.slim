@@ -1,5 +1,6 @@
 .general-container.signup-form
   h1.section-title = t('.sign_up')
+  = devise_error_messages!
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     .form-row
       = f.label :first_name, t('.first_name')

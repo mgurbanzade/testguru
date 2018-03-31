@@ -1,5 +1,5 @@
 class Admin::TestsController < Admin::BaseController
-  before_action :find_test, only: %i[show update start edit destroy]
+  before_action :find_test, only: %i[show update edit destroy]
 
   def index
     @tests = Test.all
@@ -15,6 +15,7 @@ class Admin::TestsController < Admin::BaseController
     @test = current_user.own_tests.build(test_params)
 
     if @test.save
+      notice_message('success', 'test', 'created')
       redirect_to [:admin, @test]
     else
       render :new
@@ -25,6 +26,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
+      notice_message('success', 'test', 'updated')
       redirect_to [:admin, @test]
     else
       render :edit
@@ -33,6 +35,7 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy
     @test.destroy
+    notice_message('success', 'test', 'deleted')
     redirect_to admin_tests_path
   end
 

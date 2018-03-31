@@ -1,4 +1,4 @@
 tr
-  td class="body" = test.title
-  td = test.questions.size
-  td = button_to t('.start'), start_test_path(test), class: 'btn btn-success'
+  td.body = test.title
+  td.quantity = test.questions.size
+  td.action = button_to t('.start'), start_test_path(test), class: 'btn btn-success'

@@ -1,3 +1,5 @@
+@import "vars";
+
 .answers-container {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -61,6 +63,27 @@
 
     &.success {
       color: green;
+    }
+  }
+}
+
+@media #{$mobile} {
+  .answers-container {
+    flex-direction: column;
+
+    .answer-label {
+      width: 100%;
+      margin: 0;
+
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .question-header {
+    b:last-of-type {
+      display: none;
     }
   }
 }

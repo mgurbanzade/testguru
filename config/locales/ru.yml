@@ -1,22 +1,44 @@
 ru:
+  create: Создать
+  add: Добавить
+  edit: Изменить
+  update: Обновить
+  delete: Удалить
+  confirm: Вы уверены?
+  back: Назад
+  name: Название
+  success: "%{resource} был успешно %{action}!"
+  test: Тест
+  question: Вопрос
+  answer: Ответ
+  created: создан
+  updated: обновлен
+  deleted: удален
+  helpers:
+    select: Выберите категорию
   activerecord:
     attributes:
       question:
-        body: Поле вопроса
+        body: Вопрос
+      answer:
+        body: Ответ
       user:
         email: Адрес электронной почты
-        password: Поле пароля
+        password: Пароль
         password_confirmation: Пароли
       test:
         title: Название теста
         category: Требуется указать
         author: Требуется указать
+        level: Уровень
     errors:
       models:
         user:
           attributes:
             email:
               invalid: является неверным
+            password:
+              too_short: является слишком коротким
             password_confirmation:
               confirmation: не совпадают
         test:
@@ -25,6 +47,8 @@ ru:
               required: категорию теста
             author:
               required: автора теста
+            level:
+              greater_than_or_equal_to: теста не может быть меньше 0.
       messages:
         blank: не может быть пустым
   devise:
@@ -46,14 +70,6 @@ ru:
       links:
         signup: Регистрация
         forgot: Забыли пароль?
-  create: Создать
-  add: Добавить
-  edit: Изменить
-  update: Обновить
-  delete: Удалить
-  confirm: Вы уверены?
-  back: Назад
-  name: Название
   errors:
     max_answers: У одного вопроса не может быть больше четырех ответов.
   admin:
@@ -71,7 +87,7 @@ ru:
         edit_test: Редактирование теста
         test_content: Название теста
         level: Уровень сложности
-        select: Выбрать категорию
+        # select: Выберите категорию
     questions:
       show:
         answers: Ответы
