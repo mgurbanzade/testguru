@@ -140,4 +140,9 @@ ru:
     footer:
       author: Махрам Гурбанзаде
       project: Учебный проект в онлайн-школе Thinknetica
+  tests_mailer:
+    completed_test:
+      subject: Результаты прохождения теста
+      congrats: "Поздравляем, %{user_name}!"
+      success: "Вы успешно прошли тест %{test_title}!"
 
