@@ -3,6 +3,8 @@ nav.main-navigation
     span.bar.bar1
     span.bar.bar2
     span.bar.bar3
+  = link_to root_path, class: 'main-logo'
+    = image_tag('main-logo.png')
   .navigation-items
     ul.menu
       - if current_user.is_a?(Admin)

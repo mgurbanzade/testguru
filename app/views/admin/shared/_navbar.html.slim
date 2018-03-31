@@ -1,6 +1,6 @@
 nav.main-navigation
-  .navigation-items
-    ul.menu
-      li.menu-item = link_to t('.user_mode'), tests_path
+  = link_to root_path, class: 'main-logo'
+    = image_tag('main-logo.png')
+  .navigation-items.admin
     .user-block
       = render partial: 'shared/greeting'
