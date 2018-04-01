@@ -1,0 +1,10 @@
+.general-container
+  h1.section-title = t('.gists')
+  table.table.table-striped
+    tr
+      th = t('.question')
+      th = t('.url')
+      th = t('.user')
+    = render @gists
+  .btn-row
+    = link_to t('back'), admin_tests_path, class: 'btn btn-primary'

@@ -10,6 +10,8 @@
           = b.check_box id: "answer_ids_#{b.object.id}", class: 'answer-input'
           = b.label class: 'answer-label'
 
-    .btn-row = f.submit t('.next'), class: 'btn btn-success'
+    .btn-row
+      = f.submit t('.next'), disabled: true, class: 'btn btn-success tp-next'
+      = link_to t('.save_gist'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-info'
 
 

@@ -106,9 +106,18 @@ ru:
       show:
         answer: Ответ
         correct?: correct?
+    gists:
+      index:
+        gists: Сохраненные Гисты
+        question: Вопрос
+        url: Ссылка
+        user: Пользователь
+      gist:
+        github_link: Открыть в Github
     shared:
       navbar:
         user_mode: Режим пользователя
+        gists: Сохраненные Гисты
   tests:
     index:
       tests: Список тестов
@@ -120,12 +129,17 @@ ru:
     show:
       next: Вперед
       total_questions: "Всего вопросов: %{count}"
+      save_gist: Сохранить Gist
     result:
       title: "Тест \"%{test_title}\" завершен!"
       percent: "Процент правильных ответов составляет:"
       test_passed: Поздравляем! Тест пройден!
       test_failed: К сожалению, тест не был пройден :(
       tests: Список всех тестов
+    gist:
+      success: "%{gist} был успешно сохранен!"
+      failure: Во время сохранения gist произошла ошибка
+      description: "Вопрос про %{test} из TestGuru."
   shared:
     navbar:
       about: О TestGuru
@@ -144,5 +158,6 @@ ru:
     completed_test:
       subject: Результаты прохождения теста
       congrats: "Поздравляем, %{user_name}!"
+      failure: "К сожалению, вы не смогли пройти тест :("
       success: "Вы успешно прошли тест %{test_title}!"
 

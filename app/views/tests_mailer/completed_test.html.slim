@@ -1,2 +1,5 @@
-h1.mail-title = t('.congrats', user_name: @user.first_name)
-.mail-result = t('.success', test_title: @test.title)
+- if @user.test_passage(@test).success?
+  h1.mail-title = t('.congrats', user_name: @user.first_name)
+  .mail-result = t('.success', test_title: @test.title)
+- else
+  h1.mail-title = t('.failure')
