@@ -17,3 +17,14 @@
     margin-bottom: 20px;
   }
 }
+
+table.table-striped {
+  .arrow-up, .arrow-down {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+
+  span.arrow-up {
+    display: none;
+  }
+}
