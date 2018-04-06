@@ -1,5 +1,6 @@
 .general-container
   h1.section-title = t('.tests')
+  = render 'admin/shared/errors', resource: @test
   = flash_message
   table.table.table-striped
     tr

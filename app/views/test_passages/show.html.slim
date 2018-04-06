@@ -1,5 +1,7 @@
 .general-container
   h1.section-title = @test_passage.test.title
+  .progress-bar
+    progress value="#{progress_bar}" max="100"
   .question-header
     b = question_title
     b = t('.total_questions', count: "#{@test_passage.total_questions}")
