@@ -31,6 +31,10 @@ ru:
         category: Требуется указать
         author: Требуется указать
         level: Уровень
+      feedback:
+        title: Поле темы обращения
+        body: Текст сообщения
+
     errors:
       models:
         user:
@@ -147,6 +151,7 @@ ru:
       sign_up: Регистрация
       sign_in: Вход
       admin_mode: Режим Администратора
+      feedback: Обратная Свазь
     greeting:
       welcome: "Добро пожаловать, %{user} "
       project_name: в Test Guru!
@@ -160,4 +165,12 @@ ru:
       congrats: "Поздравляем, %{user_name}!"
       failure: "К сожалению, вы не смогли пройти тест :("
       success: "Вы успешно прошли тест %{test_title}!"
-
+  feedbacks:
+    new:
+      feedback: Напишите нам
+    form:
+      title: Тема обращения
+      text: Введите текст
+      send: Отправить
+    create:
+      success: Сообщение отправлено.

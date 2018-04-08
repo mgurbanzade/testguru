@@ -1,0 +1,9 @@
+= form_with model: @feedback, local: true do |f|
+  = flash_message
+  = f.text_field :title, class: 'form-control', placeholder: t('.title')
+  .form-row
+    = f.text_area :body, resize: 'disable', cols: 10, rows: 10, class: 'form-control', placeholder: t('.text')
+  br
+  .btn-row
+    = f.submit t('.send'), class: 'btn btn-success'
+    = link_to t('back'), root_path, class: 'btn btn-primary'
