@@ -1,7 +1,3 @@
-$(document).ready(function() {
-  selectAnswer();
-});
-
 var selectAnswer = function () {
   var $nextBtn = $(document).find('.tp-next');
   var $input =  $(document).find('.answer-input');
@@ -17,4 +13,9 @@ var selectAnswer = function () {
       $nextBtn.prop('disabled', true)
     }
   });
-};
+}
+
+$("#js-form-container").empty();
+$("<%= escape_javascript(render @test_passage.current_question) %>").appendTo("#js-form-container");
+
+selectAnswer();

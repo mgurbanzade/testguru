@@ -10,6 +10,10 @@ class Test < ApplicationRecord
     only_integer: true, greater_than_or_equal_to: 0
   }
 
+  validates :timer, numericality: {
+    only_integer: true, greater_than: 0
+  }
+
   scope :easy, -> { where(level: 0..1) }
   scope :normal, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }

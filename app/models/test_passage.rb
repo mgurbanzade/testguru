@@ -30,6 +30,10 @@ class TestPassage < ApplicationRecord
     total_percent >= 85
   end
 
+  def expired?
+    Time.current > self.created_at + test.timer
+  end
+
   private
 
   def correct_answer?(answer_ids)

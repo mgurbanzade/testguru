@@ -102,7 +102,7 @@ ru:
         edit_test: Редактирование теста
         test_content: Название теста
         level: Уровень сложности
-        # select: Выберите категорию
+        timer: "Таймер (в секундах):"
     questions:
       show:
         answers: Ответы
@@ -166,6 +166,11 @@ ru:
       success: "%{gist} был успешно сохранен!"
       failure: Во время сохранения gist произошла ошибка
       description: "Вопрос про %{test} из TestGuru."
+  questions:
+    question:
+      next: Вперед
+      save_gist: Сохранить Gist
+      total_questions: "Всего вопросов: %{count}"
   shared:
     navbar:
       about: О TestGuru

@@ -7,14 +7,19 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    unless @test_passage.expired?
+      @test_passage.accept!(params[:answer_ids])
+    end
 
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now
       CreateUserBadgesService.new(@test_passage).call
       redirect_to result_test_passage_path(@test_passage)
     else
-      render :show
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 

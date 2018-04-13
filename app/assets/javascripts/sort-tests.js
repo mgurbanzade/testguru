@@ -52,14 +52,3 @@ var compareRowsDesc = function (row1, row2) {
   if (title1 > title2) { return - 1 }
   return 0
 };
-
-
-
-
-
-
-
-
-
-
-

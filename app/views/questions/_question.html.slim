@@ -1,0 +1,14 @@
+.progress-bar
+  progress value="#{progress_bar}" max="100"
+.question-header
+  b = question_title
+  b = t('.total_questions', count: "#{@test_passage.total_questions}")
+= form_with url: test_passage_path(@test_passage), method: :put, data: { timer: @test_passage.test.timer }, class: 'js-test_passage' do |f|
+  .answers-container
+    = f.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b|
+        = b.check_box id: "answer_ids_#{b.object.id}", class: 'answer-input'
+        = b.label class: 'answer-label'
+
+  .btn-row
+    = f.submit t('.next'), disabled: true, class: 'btn btn-success tp-next'
+    = link_to t('.save_gist'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-info'
