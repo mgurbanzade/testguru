@@ -5,7 +5,7 @@ h1.question-title = resource_header(@test, 'test')
   .form-row
     = f.label :level, t('.level')
     = f.number_field :level, class: 'form-control'
-  = f.collection_select :category_id, Category.all, :id, :title, { prompt: t('helpers.select')}, { class: 'custom-select' }
+  = f.collection_select :category_id, Category.all, :id, :title, { prompt: t('helpers.category')}, { class: 'custom-select' }
   br
   .btn-row
     = f.submit form_button(@test), class: 'btn btn-success'

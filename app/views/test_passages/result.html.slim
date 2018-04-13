@@ -4,6 +4,11 @@
     = t('.percent')
     span class="result #{result_color_class}" = number_to_percentage(@test_passage.total_percent, precision: 0)
   p.result-info = test_passage_status
+  ul.result-badge
+    - current_user.badges.order(created_at: :desc).each do |badge|
+      li
+        p = badge.name
+        = image_tag(badge.image)
 
   p.result-info
     = link_to t('.tests'), root_path

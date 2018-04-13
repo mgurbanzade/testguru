@@ -1,0 +1,13 @@
+.general-container
+  h1.section-title = t('.badges')
+  = render 'admin/shared/errors', resource: @badge
+  = flash_message
+  table.table.table-striped
+    tr
+      th class="body" = t('name')
+      th = t('.image')
+      th colspan="3" = t('.actions')
+    = render @badges
+
+  .btn-row
+    = link_to t('create'), new_admin_badge_path, class: 'btn btn-success'

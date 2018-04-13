@@ -100,3 +100,25 @@
     width: 100%;
   }
 }
+
+.result-badge {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    max-width: 20%;
+    margin-right: 50px;
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

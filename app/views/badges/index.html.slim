@@ -1,0 +1,6 @@
+.general-container
+  ul.badges-list
+    - @badges.each do |badge|
+      li.badges-item
+        p.badge-name = badge.name
+        = image_tag(badge.image)

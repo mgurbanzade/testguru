@@ -56,5 +56,4 @@ class TestPassage < ApplicationRecord
   def before_save_set_question
     self.current_question = determine_question
   end
-
 end

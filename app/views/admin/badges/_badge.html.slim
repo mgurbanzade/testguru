@@ -1,0 +1,6 @@
+tr
+  td class="body" = badge.name
+  td class="badge-image" = image_tag(badge.image)
+  td = link_to t('delete'), admin_badge_path(badge), method: :delete, data: { confirm:"#{t('confirm')}" }, class: 'btn btn-danger'
+  td = link_to t('update'), edit_admin_badge_path(badge),
+                            class: 'btn btn-primary'

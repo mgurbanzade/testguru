@@ -1,0 +1,15 @@
+h1.question-title = resource_header(@badge, 'badge')
+= render 'admin/shared/errors', resource: @badge
+= form_with model: [:admin, @badge], local: true do |f|
+  .form-row
+    = f.text_field :name, class: 'form-control', placeholder: "#{t('.badge_name')}"
+  .form-row
+    = f.text_field :image, class: 'form-control', placeholder: "#{t('.image')}"
+  .form-row
+    = f.label :rule, 'Правило выдачи', class: 'form-label'
+    = f.select(:rule, options_for_select([['Первая Попытка'], ['Все Категории'], ['Все Уровни']]), {}, {class: 'form-control'})
+  br
+  .btn-row
+    = f.submit form_button(@badge), class: 'btn btn-success'
+    = link_to t('back'), admin_badges_path, class: 'btn btn-primary'
+
